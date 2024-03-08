@@ -30,7 +30,13 @@ class Persona{
     }
 
     //Metodo static (no se comparte con los hijos)
-    
+    static saludar(){
+        console.log("saludos desde metodo static");
+    }
+
+    static saludar2(persona){
+        console.log(persona.nombre);
+    }
 
 }
 
@@ -74,3 +80,9 @@ console.log(empleado1);
 console.log(empleado1.nombreCompleto());
 
 console.log(empleado1.toString());
+
+// persona1.saludar(); //No e posible llama un metodo static desde un objeto
+
+Persona.saludar();
+
+Persona.saludar2(persona1);

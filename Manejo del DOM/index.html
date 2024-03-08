@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo DOM con JS</title>
+    <style>
+        .azul{
+            color:blue;
+        }
+    </style>
+</head>
+<body>
+  <h1 id="cabecero" class="azul">Ejemplo DOM con JS</h1>
+  <p id="parrafo1" class="azul">Saludos</p>
+  <p id="parrafo2" class="azul">Otro parrafo</p>
+
+  <h2>Intereactuando con formularios</h2>
+
+  <form id="formulario">
+    Nombre: <input type="text" name="nombre" value="Juan"/>
+    <br/>
+    Apellido: <input type="text" name="apellido" value="Perez"/>
+    <br/>
+
+    <button onclick="mostrarValores()">Mostrar </button>
+
+    <div id="valores"></div>
+
+  </form>
+
+  <h2>Cambiando imagen con JS</h2>
+  <button onclick="mostrar()">Cambiar</button>
+  <img id="imagen" src="http://globalmentoring.com.mx/imagenes/javascript.png"/>
+
+  <h2>Cambiando estilos css con JS</h2>
+
+  <h3 id="titulo">Texto prueba</h3>
+  <button onclick="cambiarColor()">CambiarColor</button>
+
+
+
+<script>
+   /* 
+    GET ELEMENT BY ID
+    
+    let cabecero = document.getElementById("cabecero")
+    let parrafo = document.getElementById("parrafo")
+    
+    console.log(`valor cabecero: ${cabecero.innerHTML}`);
+    console.log(`valor parrafo: ${parrafo.innerHTML}`);
+
+    parrafo.innerHTML = "nuevo valor del parrafo"
+    cabecero.innerHTML = "nuevo valor del cabecero"
+    */
+
+    /*
+    GET ELEMENT BY TAG NAME
+
+    let parrafos = document.getElementsByTagName("p");
+    console.log(`Numero de parrafos: ${parrafos.length} `)
+    for(let i=0; i<parrafos.length; i++){
+        console.log(`${i} -${parrafos[i].innerHTML}`);
+    }
+    */
+
+    /*
+    GET ELEMENT BY CLASS NAME
+
+    let elementos = document.getElementsByClassName("azul");
+    console.log(`Numero de elementos: ${elementos.length} `)
+    for(let elemento of elementos){
+        console.log(`${elemento.innerHTML}`)
+    }
+    */
+
+    /*
+    QUERY SELECTOR ALL
+
+    let elementos = document.querySelectorAll("h1.azul");
+    console.log(`Numero de elementos: ${elementos.length} `)
+    for(let elemento of elementos){
+        console.log(`${elemento.innerHTML}`)
+    }
+    */
+
+    /*
+    INTERACTUANDO CON FORMULARIO 
+
+
+    function mostrarValores(){
+        let formulario = document.forms["formulario"]
+        let texto = " "
+        for(let elemento of formulario){
+            texto+=elemento.value + "<br/>"
+
+        }
+        console.log(texto)
+        const $valores = document.getElementById("valores");
+        $valores.innerHTML = texto
+
+        //Acceder de manera idnivudual a los elementos de formulario
+        let nombre = formulario["nombre"]
+        let apellido = formulario["apellido"]
+        texto = nombre.value + "<br/>" + apellido.value
+    }
+
+    */
+
+
+    /* 
+    CAMBIAR IMAGEN CON JS
+
+    function mostrar(){
+        document.getElementById("imagen").src = "http://globalmentoring.com.mx/imagenes/html5.png"
+    }
+    
+    */
+
+    /* 
+    CAMBIO DE ESTILOS CSS CON JS
+
+    */
+
+    function cambiarColor(){
+        document.getElementById("titulo").style.color = "blue";
+    }
+
+
+
+
+    
+
+
+
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo de eventos</title>
+</head>
+<body>
+
+    <h1 id="titulo" onmousedown="rojo()" onmouseup="black()"> Manejo de eventos</h1>
+
+    <script>
+        function rojo(){
+            document.getElementById("titulo").style.color = "red"
+        }
+        
+        function black(){
+            document.getElementById("titulo").style.color = "black"
+        }
+
+
+    </script>
+
+</body>
+</html>
